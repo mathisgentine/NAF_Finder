@@ -1,2 +1,3 @@
 # NAF_Finder
-NAF_Finer
+
+Simple tool to check NAF code from SIREN, using Streamlit.
