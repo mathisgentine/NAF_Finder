@@ -27,7 +27,7 @@ def get_naf_code(siren_number):
     except:
         return "Error - Check Société.com"
 
-SIREN_to_check = st.number_input('Insert SIREN number', value=804645034)
+SIREN_to_check = st.number_input('Insert SIREN number', value=534479589)
 res = get_naf_code(SIREN_to_check)
 
 try:
