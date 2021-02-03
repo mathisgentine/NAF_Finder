@@ -30,11 +30,14 @@ def get_naf_code(siren_number):
 SIREN_to_check = st.number_input('Insert SIREN number', value=804645034)
 res = get_naf_code(SIREN_to_check)
 
-st.write('**Legal name is :** ', res["Name"])
-st.write('**Address is :** ', res["Address"])
-st.write('**ZIP is :** ', res["ZIP"])
-st.write('**City is :** ', res["City"])
-st.write('**NAF is :** ', res["NAF"])
-st.write('**Date of creation is :** ', res["Creation_date"])
-st.write('**Legal cateogry is :** ', res["Legal_category"])
-st.write('**TVA Intracommunautaire is :** ', res["TVA_Intra"])
+try:
+    st.write('**Legal name is :** ', res["Name"])
+    st.write('**Address is :** ', res["Address"])
+    st.write('**ZIP is :** ', res["ZIP"])
+    st.write('**City is :** ', res["City"])
+    st.write('**NAF is :** ', res["NAF"])
+    st.write('**Date of creation is :** ', res["Creation_date"])
+    st.write('**Legal cateogry is :** ', res["Legal_category"])
+    st.write('**TVA Intracommunautaire is :** ', res["TVA_Intra"])
+except:
+    st.write('**Error - Check Société.com**')
