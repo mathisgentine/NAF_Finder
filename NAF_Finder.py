@@ -12,7 +12,7 @@ def get_naf_code(siren_number):
     info_dict = {}
      
     try:
-    	res = requests.get(url).json()
+        res = requests.get(url).json()
 
         info_dict["Address"] = res["unite_legale"]["etablissement_siege"]["geo_adresse"]
         info_dict["ZIP"] = res["unite_legale"]["etablissement_siege"]["code_postal"]
@@ -23,7 +23,7 @@ def get_naf_code(siren_number):
         info_dict["TVA_Intra"] = res["unite_legale"]["numero_tva_intra"]
         info_dict["Name"] = res["unite_legale"]["denomination"]
 
-    	return info_dict
+        return info_dict
     except:
         return "Error - Check Société.com"
 
