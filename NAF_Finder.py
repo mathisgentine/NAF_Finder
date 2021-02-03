@@ -18,7 +18,7 @@ def get_naf_code(siren_number):
     	info_dict["ZIP"] = res["unite_legale"]["etablissement_siege"]["code_postal"]
     	info_dict["City"] = res["unite_legale"]["etablissement_siege"]["libelle_commune"]
     	info_dict["NAF"] = str(res["unite_legale"]["activite_principale"]).replace('.','')
-    	info_dict["Creation_date"] = res["unite_legale"]["date_creation"]
+        info_dict["Creation_date"] = res["unite_legale"]["date_creation"]
         info_dict["Legal_category"] = res["unite_legale"]["categorie_juridique"]
         info_dict["TVA_Intra"] = res["unite_legale"]["numero_tva_intra"]
         info_dict["Name"] = res["unite_legale"]["denomination"]
